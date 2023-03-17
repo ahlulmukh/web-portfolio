@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link.active {
+  position: relative;
+  --tw-text-opacity: 1;
+  color: hsl(0 0% 8% / var(--tw-text-opacity));
+}
+.link.active:after {
+  position: absolute;
+  content: "";
+  top: -8px;
+  left: -10px;
+  height: calc(100% + 16px);
+  width: calc(100% + 20px);
+  z-index: -10;
+  --tw-rotate: -3deg;
+  --tw-skew-x: -6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-radius: 0.125rem;
+  --tw-bg-opacity: 1;
+  background-color: hsl(189 88% 72% / var(--tw-bg-opacity));
+}
+@media (min-width: 1024px) {
+  .link.active:after {
+    left: -12px;
+    width: calc(100% + 24px);
+  }
+}
+.link:hover {
+  opacity: 1;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.3s;
+}
+
+.bottom-separator {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(51 51 51 / var(--tw-border-opacity));
+  padding-bottom: 0.5rem;
+}
+
+.center {
+margin: auto;
+width: 60%;
+padding: 10px;
+}
